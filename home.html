@@ -40,30 +40,36 @@
 
         /* ------------------ TOP NAVBAR ------------------ */
         .main-top-nav {
-            background: rgb(26, 26, 97);
-        }
+    background: rgb(26, 26, 97);
+}
 
-        .top-navbar {
-            display: flex;
-            justify-content: right;
-            gap: 20px;
-            align-items: center;
-            color: #fff;
-            font-size: 14px;
-            height: 35px;
-        }
+.top-navbar {
+    display: flex;
+    justify-content: flex-end;   
+    align-items: center;
+    gap: 20px;
+    color: #fff;
+    font-size: 14px;
+    height: 35px;
+}
 
-        .top-navbar .logo {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
+.top-navbar .logo {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+
+.top-navbar p {
+    margin: 0;
+    line-height: 1;
+}
+
 
         /* ------------------ MAIN NAVBAR ------------------ */
         .second-navbar{
             background-color:white ;
-            border-radius: 1px 1px solid rgba(0, 0, 0, 0.536);
-
+            box-shadow: 1px 1px 3px rgb(165, 164, 164);
         }
         .navbar{
             height: 70px;
@@ -106,9 +112,7 @@
 
 /* ===== TEXT SECTION ===== */
 
-.hero-wrapper .text {
-    padding-left: 70px;
-}
+
 
 .hero-wrapper .text .smaller-text {
     color: #474748e7;
@@ -122,8 +126,8 @@
 
 /* IMAGE */
 .hero-wrapper .image-wrapper {
-    position: relative;
     padding-right: 70px;
+    position: relative;
     animation: float 4s ease-in-out infinite;
 }
 
@@ -170,15 +174,14 @@
 
 /* snackbar */
 .inner-content {
-     padding-left: 70px;
-     padding-right: 70px;
      background-color: rgb(26, 26, 97) ;
-     height: 250px;
+     height: 200px;
 }
 
     .inner-content h1{
         font-size: 30px;
         color: rgb(255, 255, 255) ;
+        padding-top: 12px;
         display: flex;
         justify-content: center;
     }
@@ -188,7 +191,7 @@
     display:flex;
     justify-content:center;
     gap:20px;
-    padding:40px 20px;
+    padding:50px 20px;
     flex-wrap:wrap;
     text-align:center;
 }
@@ -196,13 +199,13 @@
     flex:1 1 150px;
    background-color: rgb(240, 240, 241);
     border-radius:12px;
-    padding:25px;
+    padding:5px;
     box-shadow:0 4px 12px rgba(0,0,0,0.1);
 }
 .stat-card h3{
     font-size:30px;
     color:rgb(26, 26, 97);
-    margin-bottom:10px;
+    margin-bottom:0px;
 }
 .stat-card p{
     font-size:14px;
@@ -214,17 +217,22 @@
 
 /* about us section  */
 .about-section {
-    padding: 80px 70px;
+    
     background-color: #ffffff;
 }
 
 .about-container {
     display: flex;
     align-items: center;
-    gap: 60px;
+   
 }
 
 /* LEFT TEXT */
+.whole-content-of-goals{
+    padding-top: 30px;
+    padding-bottom: 60px;
+
+}
 .about-text {
     flex: 1;
 }
@@ -233,19 +241,19 @@
     font-size: 42px;
     color: rgb(26, 26, 97);;
     font-weight: 700;
-    margin-bottom: 20px;
+    
 }
 
 .about-desc {
     font-size: 16px;
     color: #555;
-    margin-bottom: 30px;
+    
 }
 
 .about-point {
     display: flex;
     gap: 15px;
-    margin-bottom: 25px;
+    
 }
 
 .about-point span {
@@ -257,7 +265,7 @@
 .about-point h4 {
     font-size: 18px;
     color:  rgb(26, 26, 97);;
-    margin-bottom: 5px;
+    
 }
 
 .about-point p {
@@ -265,6 +273,37 @@
     color: #555;
     line-height: 1.6;
 }
+
+/* right two images  */
+.about-images {
+    flex: 1;
+    position: relative;
+    margin-right: 50px;
+}
+
+.about-images img {
+    width: 70%;
+    border-radius: 14px;
+    
+}
+
+.img-main {
+    max-width: 420px;
+    
+}
+
+.img-overlay {
+    position: absolute;
+    bottom: -40px;
+    right: -60px;
+    width: 100px;              
+    height: 200px;              
+    border-radius: 14px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+    object-fit: cover;
+    
+}
+
         /* Footer */
 .footer{
     background-color:rgb(26, 26, 97);
@@ -500,7 +539,7 @@
    
 
      <!-- LEFT CONTENT -->
-      <div class="whole-content-of-goals">
+      <div class="whole-content-of-goals ">
 
       <div class="container">
         <div class="row ">
@@ -547,6 +586,15 @@
      
 
       </div>
+      <!-- RIGHT TWO IMAGES  -->
+
+       <div class="col-lg-6  ">
+          <div class="about-images">
+            <img src="./homeimages/gradurate.jpg" class="img-main" alt="">
+            <img src="./homeimages/students.jpg" class="img-overlay" alt="">
+        </div>
+       </div>
+
     </div>
            
  </div>
@@ -554,7 +602,10 @@
 
 </div>
 
-<!-- left content -->
+<!-- GIRLYPOP ITS TIME FOR FEEDBACKSSS -->
+ 
+
+
  
 
      
