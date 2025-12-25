@@ -56,7 +56,7 @@
     gap: 20px;
     color: #fff;
     font-size: 14px;
-    height: 35px;
+    
 }
 
 .top-navbar .logo {
@@ -70,8 +70,11 @@
     margin: 0;
     line-height: 1;
 }
-@media screen {
-    
+@media (max-width: 768px) {
+    .main-top-nav {
+        display: none;
+        overflow: hidden;
+    }
 }
 
 
@@ -80,11 +83,7 @@
             background-color:white ;
             box-shadow: 1px 1px 3px rgb(165, 164, 164);
         }
-        .navbar{
-            height: 70px;
-            
-            
-        }
+
         .nav-item {
             padding-left: 20px;
             font-weight: 500;
@@ -106,7 +105,7 @@
             padding: 8px 18px;
             border-radius: 20px;
             border: none;
-            margin-left: 20px;
+            
         }
 
         /* -------------------HERO SECTION------------------ */
@@ -117,7 +116,9 @@
 
 .hero-wrapper .row {
     min-height: 80vh;
+    align-items: center;
 }
+
 
 /* ===== TEXT SECTION ===== */
 
@@ -132,10 +133,38 @@
     font-weight: 600;
     color: rgb(26, 26, 97);
 }
+@media (max-width: 768px) {
+
+    /* Hide overflow */
+    .hero-wrapper {
+        overflow: hidden;
+    }
+
+    /* Center all hero text */
+    .hero-wrapper .text {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .hero-wrapper .text h3 {
+        font-size: 27px;
+        font-weight: 600;
+        color: rgb(26, 26, 97);
+    }
+
+    .hero-wrapper .text p {
+        font-size: 14px;
+        max-width: 90%;
+    }
+}
+
 
 /* IMAGE */
 .hero-wrapper .image-wrapper {
-    padding-right: 70px;
+    /* padding-right: 70px; */
     position: relative;
     animation: float 4s ease-in-out infinite;
 }
@@ -145,7 +174,7 @@
     height: auto;
     position: relative;
     z-index: 5;
-    left: 20px;
+    /* left: 20px; */
 }
 
 /* FLOAT */
@@ -158,11 +187,11 @@
 /* SHAPES */
 .image-wrapper::after {
     content: '';
-    height: 400px;
+    height: 420px;
     width: 400px;
     background-color: rgb(26, 26, 97);
     position: absolute;
-    bottom: 7px;
+    bottom: 1px;
     left: 35px;
     border-radius: 280px 280px 10px 10px;
     z-index: -1;
@@ -170,15 +199,57 @@
 
 .image-wrapper::before {
    content: '';
-        height: 471px;
+        height: 494px;
         width: 430px;
         border: 1px solid rgb(26, 26, 97);
         display: inline-block;
         position: absolute;
-        top: -20px;
         left: 18px;
         z-index: -10;
         border-radius: 280px 280px 10px 10px;
+}
+@media (max-width: 768px) {
+
+    /* Center the image wrapper */
+    .hero-wrapper .image-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* margin-top: 0px; */
+    }
+   
+    /* BEFORE shape (outline) */
+    .image-wrapper::before {
+      height: 342px;
+width: 286px;
+bottom: 0px;
+left: 33px;
+       
+        
+        border-radius: 180px 180px 10px 10px;
+    }
+
+    /* AFTER shape (solid) */
+    .image-wrapper::after {
+       height: 254px;
+width: 269px;
+       bottom: 0px;
+       left: 40px;
+          
+        border-radius: 180px 180px 10px 10px;
+    }
+
+    /* Image centering */
+    .image-wrapper img {
+        left: 0;
+        max-width: 320px;
+        
+    }
+
+    /* Prevent horizontal scroll */
+    .hero-wrapper {
+        overflow-x: hidden;
+    }
 }
 
 /* snackbar */
@@ -222,6 +293,41 @@
 }
 .inner-container-wrapper{
     background-color:rgb(26, 26, 97);
+}
+@media (max-width: 768px) {
+
+    /* Smaller heading */
+    .inner-content h1 {
+        font-size: 18px;
+        text-align: center;
+        padding: 10px 15px;
+        line-height: 1.4;
+    }
+
+    /* Reduce section padding */
+    .stats-section {
+        padding: 20px 10px;
+    }
+
+    /* Force 2x2 grid */
+    .stats-section .row > div {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    /* Card styling for mobile */
+    .stat-card {
+        padding: 10px;
+        height: 100%;
+    }
+
+    .stat-card h3 {
+        font-size: 20px;
+    }
+
+    .stat-card p {
+        font-size: 12px;
+    }
 }
 
 /* about us section  */
@@ -282,6 +388,34 @@
     color: #555;
     line-height: 1.6;
 }
+@media (max-width: 768px) {
+
+    /* Image column spacing */
+    .about-images {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    /* Main image */
+    .about-images .img-main {
+        width: 90%;
+        max-width: 280px;
+        border-radius: 10px;
+    }
+
+    /* Overlay image */
+    .about-images .img-overlay {
+        position: absolute;
+        width: 55%;
+        max-width: 160px;
+        bottom: -10px;
+        right: 10px;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+}
 
 /* right two images  */
 .about-images {
@@ -312,6 +446,121 @@
     object-fit: cover;
     
 }
+/* TESTIMONIALS  */
+/* ================= Testimonials Section ================= */
+.testimonials {
+    background: #f6f9fc;
+    padding: 70px 0;
+    text-align: center;
+}
+
+.testimonials h3 {
+    font-size: 32px;
+    color: rgb(26, 26, 97);
+    margin-bottom: 50px;
+}
+
+/* ================= Swiper ================= */
+.Swiper1 {
+    padding-bottom: 50px;
+}
+
+.swiper-slide {
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+/* ================= Testimonial Card ================= */
+.testimonial-card {
+    background: #fff;
+    padding: 40px 30px 50px;
+    border-radius: 16px;
+    text-align: left;
+    position: relative;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.06);
+    max-width: 360px;
+    width: 100%;
+}
+
+/* Quote icon */
+.testimonial-card .quote {
+    font-size: 100px;
+    color: rgba(0,0,0,0.05);
+    position: absolute;
+    bottom: 5px;
+    right: 15px;
+    line-height: 1;
+}
+
+/* Avatar */
+.avatar {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    font-size: 26px;
+    color: #fff;
+    background-color: rgb(26, 26, 97);
+}
+
+/* Name */
+.testimonial-card .name {
+    color: rgb(26, 26, 97);
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+/* Text */
+.testimonial-card p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #5f6c7b;
+}
+
+/* Stars */
+.stars {
+    margin-top: 25px;
+    color: #111;
+    letter-spacing: 4px;
+    font-size: 14px;
+}
+
+/* ================= Pagination ================= */
+.swiper-pagination-bullet {
+    background: rgb(26, 26, 97);
+    opacity: 0.3;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1;
+}
+
+/* ================= Mobile Responsive ================= */
+@media (max-width: 768px) {
+
+    .testimonials h3 {
+        font-size: 20px;
+        margin-bottom: 30px;
+        padding: 0 10px;
+    }
+
+    .testimonial-card {
+        padding: 25px 20px 35px;
+    }
+
+    .testimonial-card p {
+        font-size: 14px;
+    }
+
+    .testimonial-card .quote {
+        font-size: 70px;
+    }
+}
+
 
         /* Footer */
 .footer{
@@ -376,7 +625,23 @@
     font-size:14px;
     color:#ccc;
 }
-       
+       @media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 25px;
+    }
+    .footer-section {
+        flex: 1 1 100%;
+    }
+    .social-icons {
+        justify-content: center;
+    }
+    .footer-bottom {
+        font-size: 12px;
+    }
+}
         
     </style>
 </head>
@@ -612,50 +877,119 @@
 </div>
 
 <!-- GIRLYPOP ITS TIME FOR FEEDBACKSSS -->
- <div class="container">
+ <div class="testimonials">
+<div class="container">
     <h3>What Client Love About Us</h3>
    
  
    <div class="swiper Swiper1">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
-       
+       <div class="testimonial-card">
+      <span class="quote">“</span>
+      <div class="avatar ">👤</div>
+      <h4 class="name">Ankita lamichanne</h4>
+      <p>
+        My journey with Swik Consultancy was smooth and stress-free. The counselors were extremely supportive and clearly explained every step of the process. With their guidance, I successfully received my Australian student visa. I am truly grateful for their professionalism and dedication.💕
+      </p>
+      <div class="stars">★★★★★</div>
+    </div>
       </div>
-      <div class="swiper-slide">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab eum labore quae consequuntur quas, neque optio quasi? Quas, officia quibusdam tempore facere rem, dolorem incidunt deleniti reiciendis commodi placeat temporibus, quisquam doloribus eveniet quam esse aperiam a sed ipsum eligendi iste necessitatibus! Numquam possimus vel maiores labore excepturi dignissimos et vitae dolore consectetur quisquam quo libero itaque asperiores placeat pariatur consequuntur animi, esse impedit necessitatibus exercitationem! Temporibus odit cupiditate unde quod deleniti praesentium perferendis inventore, est deserunt doloribus!</div>
-      <div class="swiper-slide">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam soluta consequatur accusamus id assumenda ad sit veritatis nulla perferendis. Placeat, temporibus laborum explicabo est odit eos porro reprehenderit repellendus? Ea illo at neque aut quas unde cupiditate assumenda nobis aspernatur quis? Mollitia, reiciendis doloremque voluptatibus quibusdam, facilis ullam omnis vero blanditiis, sed natus voluptates. Consequuntur temporibus excepturi quibusdam facere deserunt accusantium hic perspiciatis rerum, doloremque non aspernatur ratione perferendis quo iste! Asperiores magnam dicta quisquam pariatur possimus quasi quas laudantium. Officia fugit neque et perferendis iure velit labore iusto error facilis, reiciendis eligendi sint fuga sequi vero ipsum.</div>
-      <div class="swiper-slide">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea quod necessitatibus debitis fugit nam perferendis! Quae quaerat aspernatur vero facere repellat, adipisci beatae quis inventore voluptate ipsam impedit magnam. Earum at saepe molestiae repellat possimus blanditiis minima est fugiat, tenetur veritatis necessitatibus, ipsam id architecto corrupti tempore, et sunt? Hic neque adipisci id illum enim nam dolorum iste nisi incidunt at distinctio mollitia rerum quos iusto molestias itaque, recusandae labore praesentium doloremque nesciunt animi illo ratione quam. Officia ratione fuga odio impedit tempore recusandae, possimus voluptatum odit, voluptates autem, ducimus corrupti eos repellendus. Unde aliquid nesciunt aut a?</div>
-      <div class="swiper-slide">Slide 5 Lorem ipsum dolor sit amet, consectetur adipisicing elit. In ex, nihil totam possimus animi at aliquid dolor excepturi ratione fugit illo similique ut doloribus debitis reprehenderit aut eos itaque rerum voluptas architecto a nisi officia? Aspernatur neque, excepturi natus velit temporibus quia corporis quaerat explicabo ullam nam quae tenetur adipisci non laboriosam voluptatibus alias? Temporibus omnis facere consequatur nisi eius natus. Quidem cupiditate provident, aliquam maiores error, quisquam, excepturi cum rerum amet recusandae facilis soluta. Odio laudantium repudiandae temporibus praesentium omnis hic laborum voluptas a molestias voluptatem quibusdam obcaecati eaque magni nemo, id ipsa necessitatibus consequatur quae ea inventore.</div>
-      <div class="swiper-slide">Slide 6 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda maxime, enim accusantium, minima esse error rerum quis, ab architecto est similique? Nesciunt, nisi minus. Natus distinctio, saepe ducimus nulla maxime assumenda quidem accusantium eaque nobis iste facere explicabo, sit ut doloribus illo molestias provident! Veniam corrupti, ad atque temporibus itaque cumque magnam dignissimos libero voluptatibus ex maxime accusantium dolores voluptate quos eos repudiandae assumenda at. Nostrum, ullam. Itaque distinctio qui beatae saepe reiciendis? Voluptatem rerum natus culpa est.</div>
-      <div class="swiper-slide">Slide 7 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi dolores a repellat, alias saepe modi? Obcaecati, totam! Provident ratione enim cupiditate quis, saepe consequatur earum eveniet et sequi beatae eos iste voluptatem reprehenderit pariatur, eaque laudantium quaerat error. Consequatur cum corporis ipsam repellat numquam iste ad, animi quae et. In adipisci cumque laboriosam illum provident blanditiis corporis, dolor non voluptate quos doloremque molestias eaque, neque repellat fuga consequatur magni ducimus! Eos ipsam omnis, accusamus autem cum repudiandae numquam ea. Accusantium sapiente, vitae amet laudantium animi dicta atque ullam.</div>
+      <div class="swiper-slide"> <div class="testimonial-card">
+      <span class="quote">“</span>
+      <div class="avatar ">👤</div>
+      <h4 class="name">Ankita lamichanne</h4>
+      <p>
+        My journey with Swik Consultancy was smooth and stress-free. The counselors were extremely supportive and clearly explained every step of the process. With their guidance, I successfully received my Australian student visa. I am truly grateful for their professionalism and dedication.💕
+      </p>
+      <div class="stars">★★★★★</div>
+    </div>
+</div>
+      <div class="swiper-slide"> <div class="testimonial-card">
+      <span class="quote">“</span>
+      <div class="avatar ">👤</div>
+      <h4 class="name">Ankita lamichanne</h4>
+      <p>
+        My journey with Swik Consultancy was smooth and stress-free. The counselors were extremely supportive and clearly explained every step of the process. With their guidance, I successfully received my Australian student visa. I am truly grateful for their professionalism and dedication.💕
+      </p>
+      <div class="stars">★★★★★</div>
+    </div></div>
+      <div class="swiper-slide"> <div class="testimonial-card">
+      <span class="quote">“</span>
+      <div class="avatar ">👤</div>
+      <h4 class="name">Ankita lamichanne</h4>
+      <p>
+        My journey with Swik Consultancy was smooth and stress-free. The counselors were extremely supportive and clearly explained every step of the process. With their guidance, I successfully received my Australian student visa. I am truly grateful for their professionalism and dedication.💕
+      </p>
+      <div class="stars">★★★★★</div>
+    </div></div>
+      <div class="swiper-slide"> <div class="testimonial-card">
+      <span class="quote">“</span>
+      <div class="avatar ">👤</div>
+      <h4 class="name">Ankita lamichanne</h4>
+      <p>
+        My journey with Swik Consultancy was smooth and stress-free. The counselors were extremely supportive and clearly explained every step of the process. With their guidance, I successfully received my Australian student visa. I am truly grateful for their professionalism and dedication.💕
+      </p>
+      <div class="stars">★★★★★</div>
+    </div></div>
+      <div class="swiper-slide"> <div class="testimonial-card">
+      <span class="quote">“</span>
+      <div class="avatar ">👤</div>
+      <h4 class="name">Ankita lamichanne</h4>
+      <p>
+        My journey with Swik Consultancy was smooth and stress-free. The counselors were extremely supportive and clearly explained every step of the process. With their guidance, I successfully received my Australian student visa. I am truly grateful for their professionalism and dedication.💕
+      </p>
+      <div class="stars">★★★★★</div>
+    </div></div>
+      <div class="swiper-slide"> <div class="testimonial-card">
+      <span class="quote">“</span>
+      <div class="avatar ">👤</div>
+      <h4 class="name">Ankita lamichanne</h4>
+      <p>
+        My journey with Swik Consultancy was smooth and stress-free. The counselors were extremely supportive and clearly explained every step of the process. With their guidance, I successfully received my Australian student visa. I am truly grateful for their professionalism and dedication.💕
+      </p>
+      <div class="stars">★★★★★</div>
+    </div></div>
       
     </div>
     <div class="swiper-pagination"></div>
   </div>
 
+ </div>
+ 
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
 <script>
-    var swiper = new Swiper(".mySwiper", {
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-    });
-  </script>
-  <script>
     var swiper = new Swiper(".Swiper1", {
+  slidesPerView: 3,       // Desktop default
+  spaceBetween: 30,
+  loop: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  breakpoints: {
+    0: {       // Mobile view
+      slidesPerView: 1,   // Only 1 card per view
+      spaceBetween: 15
+    },
+    768: {     // Tablet view
+      slidesPerView: 2,
+      spaceBetween: 20
+    },
+    1024: {    // Desktop view
       slidesPerView: 3,
-      spaceBetween: 30,
-      freeMode: true,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-       autoplay: {
+      spaceBetween: 30
+    },
+    autoplay: {
         delay: 2500,
         disableOnInteraction: false,
       }
-    });
+  },
+});
+
+       
+    
   </script>
 
  </div>
