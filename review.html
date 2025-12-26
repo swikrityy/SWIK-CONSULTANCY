@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gallery</title>
+    <title>Review US</title>
 
     <!-- Fancybox -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.css" />
@@ -18,6 +18,13 @@
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- swiper link -->
+     <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+/>
+
 
     <style>
         /* ------------------ GLOBAL ------------------ */
@@ -136,26 +143,221 @@
     font-size: 50px;
     font-weight: 700;
 }
+/* testimonials */
+/* TESTIMONIALS  */
+/* ================= Testimonials Section ================= */
+.testimonials {
+    background: #f6f9fc;
+    padding: 70px 0;
+    text-align: center;
+}
 
-        /* ---------------- GALLERY ---------------- */
-        .gallery-card {
-            position: relative;
-            overflow: hidden;
-            border-radius: 14px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-            height: 250px;
-        }
-        .gallery-card img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-        .gallery-card:hover img {
-            transform: scale(1.1);
-        }
+.testimonials h3 {
+    font-size: 32px;
+    color: rgb(26, 26, 97);
+    margin-bottom: 50px;
+}
 
-        /* Footer */
+/* ================= Swiper ================= */
+.Swiper1 {
+    padding-bottom: 50px;
+}
+
+.swiper-slide {
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+/* ================= Testimonial Card ================= */
+.testimonial-card {
+    background: #fff;
+    padding: 40px 30px 50px;
+    border-radius: 16px;
+    text-align: left;
+    position: relative;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.06);
+    max-width: 360px;
+    width: 100%;
+}
+
+/* Quote icon */
+.testimonial-card .quote {
+    font-size: 100px;
+    color: rgba(0,0,0,0.05);
+    position: absolute;
+    bottom: 5px;
+    right: 15px;
+    line-height: 1;
+}
+
+/* Avatar */
+.avatar {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    font-size: 26px;
+    color: #fff;
+    background-color: rgb(26, 26, 97);
+}
+
+/* Name */
+.testimonial-card .name {
+    color: rgb(26, 26, 97);
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+/* Text */
+.testimonial-card p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #5f6c7b;
+}
+
+/* Stars */
+.stars {
+    margin-top: 25px;
+    color: #111;
+    letter-spacing: 4px;
+    font-size: 14px;
+}
+
+/* ================= Pagination ================= */
+.swiper-pagination-bullet {
+    background: rgb(26, 26, 97);
+    opacity: 0.3;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1;
+}
+
+/* ================= Mobile Responsive ================= */
+@media (max-width: 768px) {
+
+    .testimonials h3 {
+        font-size: 20px;
+        margin-bottom: 30px;
+        padding: 0 10px;
+    }
+
+    .testimonial-card {
+        padding: 25px 20px 35px;
+    }
+
+    .testimonial-card p {
+        font-size: 14px;
+    }
+
+    .testimonial-card .quote {
+        font-size: 70px;
+    }
+}
+/* ================= REVIEW US ================= */
+.review-us-section {
+  padding: 90px 0;
+  background-color: #fff;
+}
+
+.review-title {
+  text-align: center;
+  font-size: 42px;
+  font-weight: 600;
+  color:  rgb(26, 26, 97);
+}
+
+.platform-title {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.qr-box {
+  display: inline-block;
+  padding: 20px;
+  background: #fff;
+  
+}
+
+
+
+.qr-box img {
+  width: 170px;
+  height: 160px;
+}
+
+.scan-text {
+  margin-top: 15px;
+  font-weight: 500;
+  color: #555;
+}
+
+.review-btn {
+  margin-top: 15px;
+  padding: 10px 22px;
+  border: none;
+  border-radius: 6px;
+  background:  rgb(26, 26, 97);
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.review-btn:hover {
+  background: rgb(26, 26, 97);
+  color: #fff;
+  transition: 0.3s ease;
+}
+/* Force side-by-side QR on mobile */
+@media (max-width: 576px) {
+  .review-us-section .row {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 15px;
+  }
+
+  .review-us-section .col-md-5 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .qr-box img {
+    width: 100px;   /* smaller QR on mobile */
+    height: 100px;
+  }
+
+  .platform-title {
+    font-size: 14px;
+  }
+
+  .scan-text {
+    font-size: 12px;
+  }
+
+  .review-btn {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .review-title {
+    font-size: 28px;
+  }
+
+  .qr-box img {
+    width: 140px;
+    height: 140px;
+  }
+}
+/* FOOTER  */
+ /* Footer */
 .footer{
     background-color:rgb(26, 26, 97);
     color:white;
@@ -210,6 +412,8 @@
 .social-icons a:hover{
     color:#ffffff;
 }
+
+
 .footer-bottom{
     text-align:center;
     margin-top:20px;
@@ -235,10 +439,12 @@
         font-size: 12px;
     }
 }
-    </style>
+
+
+</style>
 </head>
 <body>
- <!-- ================= TOP NAVBAR ================= -->
+    <!-- ================= TOP NAVBAR ================= -->
     <div class="main-top-nav">
         <div class="container">
             <div class="top-navbar">
@@ -329,80 +535,179 @@
 <!-- HERO -->
 <div class="image-wrapper">
     <div class="opacity"></div>
-    <img src="./Gallery/galleryhero.jpg" alt="Hero Image">
-    <div class="hero-text"><h1>Gallery</h1></div>
+    <img src="./reviewphotos/reviewhero.jpg" alt="Hero Image">
+    <div class="hero-text"><h1>Review</h1></div>
 </div>
+ 
+<!-- what customer say about us  -->
+ <!-- GIRLYPOP ITS TIME FOR FEEDBACKSSS -->
+ <div class="testimonials">
+<div class="container">
+    <h3>What Client Love About Us</h3>
+   
+ 
+   <div class="swiper Swiper1">
+  <div class="swiper-wrapper">
 
-<!-- GALLERY -->
-<div class="container my-5">
-    <div class="row g-4">
-        <!-- IMAGE ITEMS -->
-        <!-- Repeat for all 11 images -->
-        <div class="col-lg-4 col-md-6">
-            <a href="./Gallery/photo1.jpg" data-fancybox="gallery" data-caption="Project Handling">
-                <div class="gallery-card"><img src="./Gallery/photo1.jpg" alt="Project Handling"></div>
-            </a>
-        </div>
-        <div class="col-lg-4 col-md-6">
-            <a href="./Gallery/photo2.jpg" data-fancybox="gallery" data-caption="Contract Signing">
-                <div class="gallery-card"><img src="./Gallery/photo2.jpg" alt="Contract Signing"></div>
-            </a>
-        </div>
-        <div class="col-lg-4 col-md-6">
-            <a href="./Gallery/photo3.jpg" data-fancybox="gallery" data-caption="Conference Hall">
-                <div class="gallery-card"><img src="./Gallery/photo3.jpg" alt="Conference Hall"></div>
-            </a>
-        </div>
-        <div class="col-lg-4 col-md-6">
-            <a href="./Gallery/photo4.jpg" data-fancybox="gallery" data-caption="Discussion">
-                <div class="gallery-card"><img src="./Gallery/photo4.jpg" alt="Discussion"></div>
-            </a>
-        </div>
-        <div class="col-lg-4 col-md-6">
-            <a href="./Gallery/photo5.jpg" data-fancybox="gallery" data-caption="Project Management Team">
-                <div class="gallery-card"><img src="./Gallery/photo5.jpg" alt="Project Management Team"></div>
-            </a>
-        </div>
-        <div class="col-lg-4 col-md-6">
-            <a href="./Gallery/photo6.jpg" data-fancybox="gallery" data-caption="Web Handling">
-                <div class="gallery-card"><img src="./Gallery/photo6.jpg" alt="Web Handling"></div>
-            </a>
-        </div>
-        <div class="col-lg-4 col-md-6">
-            <a href="./Gallery/photo7.jpg" data-fancybox="gallery" data-caption="Web Handling">
-                <div class="gallery-card"><img src="./Gallery/photo7.jpg" alt="Web Handling"></div>
-            </a>
-        </div>
-        <div class="col-lg-4 col-md-6">
-            <a href="./Gallery/PHOTO8.jpg" data-fancybox="gallery" data-caption="Web Handling">
-                <div class="gallery-card"><img src="./Gallery/PHOTO8.jpg" alt="Web Handling"></div>
-            </a>
-        </div>
-        <div class="col-lg-4 col-md-6">
-            <a href="./Gallery/photo9.jpg" data-fancybox="gallery" data-caption="Web Handling">
-                <div class="gallery-card"><img src="./Gallery/photo9.jpg" alt="Web Handling"></div>
-            </a>
-        </div>
-        <div class="col-lg-4 col-md-6">
-            <a href="./Gallery/photo10.jpg" data-fancybox="gallery" data-caption="Web Handling">
-                <div class="gallery-card"><img src="./Gallery/photo10.jpg" alt="Web Handling"></div>
-            </a>
-        </div>
-        <div class="col-lg-4 col-md-6">
-            <a href="./Gallery/photo11.jpg" data-fancybox="gallery" data-caption="Web Handling">
-                <div class="gallery-card"><img src="./Gallery/photo11.jpg" alt="Web Handling"></div>
-            </a>
-        </div>
-        <div class="col-lg-4 col-md-6">
-            <a href="./Gallery/photo12.jpg" data-fancybox="gallery" data-caption="Web Handling">
-                <div class="gallery-card"><img src="./Gallery/photo12.jpg" alt="Web Handling"></div>
-            </a>
-        </div>
+    <div class="swiper-slide">
+      <div class="testimonial-card">
+        <span class="quote">“</span>
+        <div class="avatar">👤</div>
+        <h4 class="name">Ankita Lamichhane</h4>
+        <p>
+          Swik Consultancy made my study abroad process so easy. From course selection to visa documentation, everything was handled professionally. I felt confident and supported at every step. 💙
+        </p>
+        <div class="stars">★★★★★</div>
+      </div>
     </div>
+
+    <div class="swiper-slide">
+      <div class="testimonial-card">
+        <span class="quote">“</span>
+        <div class="avatar">👤</div>
+        <h4 class="name">Rohan Adhikari</h4>
+        <p>
+          I was confused about choosing the right university, but the counselors guided me perfectly. Their honest advice and quick responses really impressed me. Highly recommended! 🙌
+        </p>
+        <div class="stars">★★★★★</div>
+      </div>
+    </div>
+
+    <div class="swiper-slide">
+      <div class="testimonial-card">
+        <span class="quote">“</span>
+        <div class="avatar">👤</div>
+        <h4 class="name">Suman Karki</h4>
+        <p>
+          Thanks to Swik Consultancy, my Australian student visa was approved without any hassle. Their documentation support was excellent, and the team was very friendly throughout the process. 😊
+        </p>
+        <div class="stars">★★★★★</div>
+      </div>
+    </div>
+
+    <div class="swiper-slide">
+      <div class="testimonial-card">
+        <span class="quote">“</span>
+        <div class="avatar">👤</div>
+        <h4 class="name">Pooja Shrestha</h4>
+        <p>
+          The team genuinely cares about students. They explained everything clearly and always answered my questions patiently. I’m grateful for their constant support. 🌟
+        </p>
+        <div class="stars">★★★★★</div>
+      </div>
+    </div>
+
+    <div class="swiper-slide">
+      <div class="testimonial-card">
+        <span class="quote">“</span>
+        <div class="avatar">👤</div>
+        <h4 class="name">Nishan Bhandari</h4>
+        <p>
+          Professional, reliable, and trustworthy. Swik Consultancy helped me choose the right pathway for my future. I couldn’t have done this without their guidance. 🙏
+        </p>
+        <div class="stars">★★★★★</div>
+      </div>
+    </div>
+
+    <div class="swiper-slide">
+      <div class="testimonial-card">
+        <span class="quote">“</span>
+        <div class="avatar">👤</div>
+        <h4 class="name">Aayush Pokhrel</h4>
+        <p>
+          From IELTS guidance to visa submission, everything was smooth and well-managed. I highly appreciate their dedication and clear communication. 💼✈️
+        </p>
+        <div class="stars">★★★★★</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="swiper-pagination"></div>
+</div>
 </div>
 
-<!-- FOOTER -->
-<!-- FOOTER -->
+<!-- areview us  -->
+ <!-- ================= REVIEW US SECTION ================= -->
+<section class="review-us-section">
+  <div class="container">
+    <h2 class="review-title">Review us</h2>
+
+    <div class="row justify-content-center mt-5">
+
+      <!-- Google Review -->
+      <div class="col-md-5 text-center mb-5">
+        <h5 class="platform-title">Review us on Google</h5>
+
+        <div class="qr-box">
+          <img src="./reviewphotos/qr.jpg" alt="Google Review QR">
+        </div>
+
+        <p class="scan-text">Scan Me !!</p>
+
+        <a href="https://g.page/your-google-review-link" target="_blank">
+          <button class="review-btn">Click to review on Google</button>
+        </a>
+      </div>
+
+      <!-- Facebook Review -->
+      <div class="col-md-5 text-center mb-5">
+        <h5 class="platform-title">Review us on Facebook</h5>
+
+        <div class="qr-box">
+          <img src="./reviewphotos/qr.jpg" alt="Facebook Review QR">
+        </div>
+
+        <p class="scan-text">Scan Me !!</p>
+
+        <a href="https://facebook.com/your-page-reviews" target="_blank">
+          <button class="review-btn">Click to review on Facebook</button>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+<script>
+    var swiper = new Swiper(".Swiper1", {
+  slidesPerView: 3,       // Desktop default
+  spaceBetween: 30,
+  loop: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+   autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+  breakpoints: {
+    0: {       // Mobile view
+      slidesPerView: 1,   // Only 1 card per view
+      spaceBetween: 15
+    },
+    768: {     // Tablet view
+      slidesPerView: 2,
+      spaceBetween: 20
+    },
+    1024: {    // Desktop view
+      slidesPerView: 3,
+      spaceBetween: 30
+    },
+   
+  }
+});
+
+       
+    
+  </script>
+
+ </div>
+
+ <!-- footer  -->
  <footer class="footer">
     <div class="footer-container">
         <div class="footer-section">
@@ -443,10 +748,8 @@
     </div>
 </footer>
 
+
+<!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.umd.js"></script>
-<script>
-    Fancybox.bind('[data-fancybox="gallery"]', {});
-</script>
 </body>
 </html>
