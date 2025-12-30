@@ -140,9 +140,33 @@
 }
 
 .hero-text h1 {
-    font-size: 0px;
-    font-weight: 100;
+    font-size: 48px;
+    font-weight: 600;
+    letter-spacing: 4px;
 }
+
+@media (max-width: 768px) {
+    .hero-text h1 {
+        font-size: 28px;
+        letter-spacing: 2px;
+    }
+}
+@media (max-width: 768px) {
+  .image-wrapper {
+    height: 28vh;
+  }
+
+  .hero-text {
+    width: 100%;
+    padding: 0 15px;
+  }
+
+  .hero-text h1 {
+    font-size: 26px;
+    letter-spacing: 2px;
+  }
+}
+
 /* testimonials */
 /* TESTIMONIALS  */
 /* ================= Testimonials Section ================= */
@@ -239,25 +263,43 @@
 
 /* ================= Mobile Responsive ================= */
 @media (max-width: 768px) {
+  .swiper-slide {
+    padding: 0 10px;
+  }
 
-    .testimonials h3 {
-        font-size: 20px;
-        margin-bottom: 30px;
-        padding: 0 10px;
-    }
+  .testimonial-card {
+    max-width: 100%;
+    padding: 22px 18px;
+  }
 
-    .testimonial-card {
-        padding: 25px 20px 35px;
-    }
+  .testimonial-card p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
 
-    .testimonial-card p {
-        font-size: 14px;
-    }
+  .avatar {
+    width: 42px;
+    height: 42px;
+    font-size: 20px;
+  }
 
-    .testimonial-card .quote {
-        font-size: 70px;
-    }
+  .testimonial-card .name {
+    font-size: 15px;
+  }
+
+  .stars {
+    font-size: 12px;
+    margin-top: 12px;
+  }
 }
+.swiper-wrapper {
+  align-items: stretch;
+}
+
+.testimonial-card {
+  height: 100%;
+}
+
 /* ================= REVIEW US ================= */
 .review-us-section {
   padding: 90px 0;
@@ -315,10 +357,19 @@
 }
 /* Force side-by-side QR on mobile */
 @media (max-width: 576px) {
+  .review-us-section {
+    padding: 50px 0;
+  }
+
+  .review-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
   .review-us-section .row {
     display: flex;
     flex-wrap: nowrap;
-    gap: 15px;
+    gap: 12px;
   }
 
   .review-us-section .col-md-5 {
@@ -326,24 +377,29 @@
     max-width: 50%;
   }
 
+  .qr-box {
+    padding: 12px;
+  }
+
   .qr-box img {
-    width: 100px;   /* smaller QR on mobile */
-    height: 100px;
+    width: 95px;
+    height: 95px;
   }
 
   .platform-title {
-    font-size: 14px;
+    font-size: 13px;
   }
 
   .scan-text {
-    font-size: 12px;
+    font-size: 11px;
   }
 
   .review-btn {
-    font-size: 12px;
-    padding: 8px 12px;
+    font-size: 11px;
+    padding: 7px 10px;
   }
 }
+
 
 /* Mobile */
 @media (max-width: 768px) {
