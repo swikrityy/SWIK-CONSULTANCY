@@ -15,6 +15,9 @@
 
 <!-- Remix Icons -->
 <link href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css" rel="stylesheet">
+ 
+<!-- aos link -->
+ <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 <style>
 /* ------------------ GLOBAL ------------------ */
@@ -560,10 +563,15 @@
 <div class="container section director-section">
     <div class="row align-items-center g-4">
         <div class="col-lg-5">
-            <img src="./aboutusimages/director.png" alt="Director">
+            <div data-aos="fade-right"   data-aos-duration="3000">
+                <img src="./aboutusimages/director.png" alt="Director">
+
+            </div>
+            
         </div>
         <div class="col-lg-7">
-            <h1>Message from the Director</h1>
+             <div data-aos="fade-left"   data-aos-duration="3000">
+                 <h1>Message from the Director</h1>
             <p>
 Welcome to Swik Consultancy.  
 
@@ -577,6 +585,9 @@ Warm regards,
 Swikrity Sapkota  
 Director, Swik Consultancy
             </p>
+             </div>
+
+           
         </div>
     </div>
 </div>
@@ -621,7 +632,12 @@ Director, Swik Consultancy
         <p>&copy; 2025 Swik Consultancy. All rights reserved.</p>
     </div>
 </footer>
-
+<!-- aos script  -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<!-- aos script initalization -->
+<script>
+  AOS.init();
+</script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
